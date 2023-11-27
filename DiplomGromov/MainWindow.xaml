@@ -1,0 +1,32 @@
+﻿<Window x:Class="DiplomGromov.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiplomGromov"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" MinWidth="800" MinHeight="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="769*"/>
+            <ColumnDefinition Width="12*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21*" MaxHeight="21" MinHeight="21"/>
+            <RowDefinition Height="398*"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="ContentFrame" Content="Frame" Grid.Column="1" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Menu Name="MenuProgram" Margin="10,0,0,0" Grid.ColumnSpan="2" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" Visibility="Visible">
+            <Button x:Name="TrainerButton" Content="Тренажёр" Click="TrainerButton_Click"/>
+            <Button x:Name="ProfileButton" Content="Профиль" Click="ProfileButton_Click"/>
+            <Button x:Name="ProgressButton" Content="Прогресс" Click="ProgressButton_Click"/>
+            <Button x:Name="TaskCreate" Content="Создание заданий" Click="TaskCreate_Click"/>
+        </Menu>
+        <Menu Name="MenuAuth" Margin="10,0,0,0" Grid.ColumnSpan="2" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" Visibility="Hidden">
+            <Button x:Name="AuthButton" Content="Авторизация" Click="AuthButton_Click"/>
+            <Button x:Name="RegisButton" Content="Регистрация" Click="RegisButton_Click"/>
+        </Menu>
+
+    </Grid>
+</Window>
